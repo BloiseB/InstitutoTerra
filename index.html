@@ -195,6 +195,15 @@
       text-transform: none;
       font-size: .84rem;
     }
+    .scroll-nav .scroll-brand .brand-mark {
+      width: 30px;
+      height: 30px;
+    }
+
+    .scroll-nav .scroll-brand::after {
+  display: none;
+    }
+    
     .scroll-nav .scroll-cta {
       border: 1px solid rgba(255,255,255,.34);
       padding-inline: 14px;
@@ -971,7 +980,9 @@
   </header>
 
   <nav class="scroll-nav" id="scrollNav" aria-label="Navegação fixa">
-    <a class="scroll-brand" href="#topo">Instituto Terra</a>
+   <a class="scroll-brand" href="#topo" aria-label="Instituto Terra — início">
+  <span class="brand-mark" aria-hidden="true"></span>
+    </a>
     <a href="#sobre">Sobre</a>
     <a href="#atuacao">Atuação</a>
     <a href="#impacto">Impacto</a>
