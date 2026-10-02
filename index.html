@@ -335,9 +335,19 @@
       justify-content: center;
       padding: 96px 28px 40px;
       transform: translateY(-102%);
-      transition: transform .45s cubic-bezier(.22,.72,.24,1);
+      visibility: hidden;
+      opacity: 0;
+      pointer-events: none;
+      overflow: hidden;
+      transition: transform .45s cubic-bezier(.22,.72,.24,1), opacity .2s ease, visibility 0s linear .45s;
     }
-    .mobile-menu.open { transform: translateY(0); }
+    .mobile-menu.open {
+      transform: translateY(0);
+      visibility: visible;
+      opacity: 1;
+      pointer-events: auto;
+      transition: transform .45s cubic-bezier(.22,.72,.24,1), opacity .2s ease;
+    }
     .mobile-menu a {
       text-decoration: none;
       font-family: "Manrope", sans-serif;
